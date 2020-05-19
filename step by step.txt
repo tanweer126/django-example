@@ -4,4 +4,4 @@
 git config --global user.email "tanweerkhan126@gmail.com"
 git config --global user.name "tanweerkhan126"  
 4. git remote add origin https://github.com/tanweer126/django-example.git
-5.
+5. git push -u origin master
