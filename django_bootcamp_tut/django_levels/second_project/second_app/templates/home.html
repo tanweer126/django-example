@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<!doctype html>
+{% load static %}
+
+{%block u%}
+        <title>
+            SECOND APP
+        </title>
+        <h1 > 
+            SECOND APP HOME PAGE    
+        </h1>
+{%endblock u%}
+
+{%block content%}
+        </br>
+        <h2> Welcome to the Home Page</h2>
+      
+        </br>
+        <em>{{lines}}</em>
+    </br>
+    <img src = "{%static "images/image.jpg" %}"/>
+{%endblock content%}
+
+
+

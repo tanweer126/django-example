@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+<!doctype html>
+
+{%load static %}
+
+{%block u%}
+    <title>
+    SECOND APP
+    </title>
+    <h1 > 
+    Welcome to the relative url page
+    </h1>
+{%endblock u%}
+
+{%block content%}
+<body> 
+    <div>
+        <h3> Please go to /users to sign up</h3>
+        <a href={% url 'second_app:index' %}> The index page</a>
+    </br>
+        <a href = {% url 'admin:index' %}> LINK to admin</a>
+    </br>
+        <a href={% url 'second_app:users' %}> The new users page</a>
+        
+    </div>
+</body>
+{%endblock content%}

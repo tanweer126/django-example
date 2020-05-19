@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+<!doctype html>
+
+{%load static %}
+
+{%block u%}
+    <title>
+    SECOND APP
+    </title>
+    <h1 > 
+    SECOND APP INDEX PAGE    
+    </h1>
+{%endblock u%}
+
+{%block content%}
+<body> 
+    <div class= "djangotwo">
+        <p> Please go to /users to sign up</p>
+        <h1>{{text|upper }} </h1>
+    </br>
+        <h1>{{numbers|add:"99"}}</h1>
+    </div>
+</body>
+{%endblock content%}

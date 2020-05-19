@@ -1,0 +1,47 @@
+<!doctype html>
+{% load static %}
+
+
+<html lang="en">
+    <head>  
+        <meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel = "stylesheet" href = "{% static "css/mystyle.css" %}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        {%block u%}
+        
+        {%endblock u%}
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <div clas= "container">
+                <ul class="navbar-brand">
+                    <li> <a class="navbar-brand" href ="{%url 'admin:index'%}"> Django</a></li>
+                    <li><a class="navbar-link" href = "{% url 'admin:index' %}"> Admin</a></li>
+                    <li><a class = "navbar-link" href = "{%url 'second_app:registration' %}"> Register</a></li>
+                    {%if user.is_authenticated %}
+                    <li><a class = "navbar-link" href = "{%url 'second_app:logout' %}"> Logout</a></li>
+                    {% else %}
+                    <li><a class = "navbar-link" href = "{%url 'second_app:user_login' %}"> Login</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            
+            <!-- As a heading -->
+            
+    </br> 
+
+            </div>
+        <div class ="container">
+            
+               
+                    {%block content%}
+        
+                    {%endblock content%}     
+                              
+            
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+
+ {%block u%}
+        <title> FORM PAGE  </title> 
+ {%endblock u%}
+
+
+
+
+{%block content%}
+    <body> <h1> Welcome to the Form Page </h1></br>  
+        <div class = "jumbotron">
+            <form method ="POST">
+                {% csrf_token %}
+                {{name_dict.as_p}}
+                <input type="submit" class = "btn btn-primary" vlaue="Submit">
+            </form>
+            </div>
+    </body>
+{%endblock content%}
+
